@@ -1,0 +1,16 @@
+﻿<Window x:Class="BCSsolution.onStart.view.IntroScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BCSsolution.onStart.view"
+        mc:Ignorable="d"
+        Title="SplashScreen" Height="250" Width="320" AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Icon="../../resources/iconapp.png" ResizeMode="NoResize" Cursor="Wait">
+    <Window.Background>
+        <ImageBrush ImageSource="/BCSsolution;component/resources/start3.png"/>
+    </Window.Background>
+    <Grid Name="grSplash">
+        <Label x:Name="lblLoading" Content="                 Loading" HorizontalAlignment="Stretch" Margin="0,157,0,51" Width="320" FontWeight="Bold" FontSize="22" Foreground="AntiqueWhite" />
+        <Label x:Name="lblVersioning" HorizontalAlignment="Stretch" Margin="0,213,0,0" Height="23" Width="320" HorizontalContentAlignment="Center" Foreground="AntiqueWhite" FontSize="11"/>
+    </Grid>
+</Window>
