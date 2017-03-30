@@ -129,7 +129,6 @@
 
         </Frame>
         <ScrollViewer x:Name="scrollConsole" Grid.Row="2" HorizontalAlignment="Stretch" Width="Auto">
-
             <TextBlock x:Name="txtMessages" TextWrapping="Wrap" LineHeight="Auto" Padding="5,2" FontFamily="Arial" FontSize="12" VerticalAlignment="Bottom"/>
         </ScrollViewer>
         <Grid Grid.Row="3" VerticalAlignment="Bottom">
