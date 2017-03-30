@@ -105,7 +105,6 @@ namespace BCSsolution.dbManager
 
                 //mySession.Save(new Customer { FirstName = "John", LastName = "Papa", Ids = "12345", Grs = "12345", Tel1 = "123456789", Mob1 = "123456789", Email = "test@gmail.com" });
                 //mySession.Save(new customer { FirstName = "Greek", LastName = "Freak", Ids = "123456", Grs = "123456", Tel1 = "123456789", Mob1 = "123456789", Email = "test@gmail.com" });
-
                 transaction.Commit();
             };
         }
