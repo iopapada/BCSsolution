@@ -8,7 +8,8 @@
         ShowInTaskbar="True"
         WindowStyle="ToolWindow"
         Closing="login_OnClosing"
-        Title="Login" Height="250" Width="400" Icon="../../resources/lock.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Topmost="True" Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}">
+        Name="LoginWindow"
+        Title="Login" Height="250" Width="400" Icon="../../resources/lock2.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Topmost="True" Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -20,7 +21,7 @@
         <TextBox x:Name="textBoxUsername" HorizontalAlignment="Left" Height="23" Margin="145,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184"/>
         <Label x:Name="lblPswd" Content="Password:" HorizontalAlignment="Left" Margin="59,88,0,0" VerticalAlignment="Top" Width="81" Height="23" HorizontalContentAlignment="Right"/>
         <PasswordBox x:Name="textBoxPswd" HorizontalAlignment="Left" Margin="145,88,0,0" VerticalAlignment="Top" Width="184" Height="23"/>
-        <Button x:Name="btnLogin" Style="{StaticResource BaseButtonStyle}" Content="Login" HorizontalAlignment="Left" Margin="192,117,0,0" VerticalAlignment="Top" Width="101" Click="btnLogin_Click"/>
+        <Button x:Name="btnLogin" Style="{StaticResource BaseButtonStyle}" Content="Login" HorizontalAlignment="Left" Margin="192,117,0,0" VerticalAlignment="Top" Width="101" Click="btnLogin_Click" IsDefault="True"/>
 
         <Button x:Name="btnDBconnect" Style="{StaticResource BaseButtonStyle}" HorizontalAlignment="Left" Margin="11,137,0,0" VerticalAlignment="Top" Width="42" Height="42">
             <Button.Background>

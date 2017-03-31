@@ -5,10 +5,14 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BCSsolution.organization.view"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="600" d:DesignWidth="600"
       Title="PagePlan">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label x:Name="label" Content="Plan" VerticalAlignment="Top" Width="Auto" Height="25" FontWeight="Bold" Background="Gainsboro"/>
     </Grid>
 </Page>

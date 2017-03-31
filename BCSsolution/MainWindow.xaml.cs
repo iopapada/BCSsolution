@@ -30,6 +30,7 @@ namespace BCSsolution
         {
             InitializeComponent();
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            this.KeyDown += new KeyEventHandler(OnKeyDown);
         }
         //Help buttons
         private void btnBack_Click(object sender, RoutedEventArgs e)
@@ -69,17 +70,17 @@ namespace BCSsolution
 
         private void btnTace_Click(object sender, RoutedEventArgs e)
         {
-
+            mainFrame.NavigationService.Navigate(new PageTrace());
         }
 
         private void btnPlan_Click(object sender, RoutedEventArgs e)
         {
-
+            mainFrame.NavigationService.Navigate(new PagePlan());
         }
 
         private void btnOrganizeSettings_Click(object sender, RoutedEventArgs e)
         {
-
+            mainFrame.NavigationService.Navigate(new PageSettings());
         }
         //Automations buttons
         private void btnHome_Click(object sender, RoutedEventArgs e)
@@ -120,6 +121,20 @@ namespace BCSsolution
         public void ClearTextBlock() {
 
         }
+
         #endregion
+
+        //Key event handlers
+        private void OnKeyDown(object sender, KeyEventArgs e)
+        {
+            if ((Keyboard.IsKeyDown(Key.RightCtrl) || Keyboard.IsKeyDown(Key.RightCtrl)) && e.Key == Key.Back)
+                btnBack_Click(sender, e);
+            else if ((Keyboard.IsKeyDown(Key.RightCtrl) || Keyboard.IsKeyDown(Key.RightCtrl)) && e.Key == Key.Enter)
+                btnNext_Click(sender, e);
+            else if (e.Key == Key.F5)
+                btnRefresh_Click(sender, e);
+            //else if (e.Key == Key.Escape)
+               
+        }
     }
 }

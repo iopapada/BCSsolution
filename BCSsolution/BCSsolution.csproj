@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>resources\iconapp.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
@@ -180,10 +183,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="resources\iconapp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="resources\iconapp2.png" />
+    <EmbeddedResource Include="resources\iconapp2.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\camera.png" />
@@ -205,26 +205,13 @@
     <Resource Include="resources\trace.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="resources\alert.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="resources\alert2.png" />
-    <Resource Include="resources\alert3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="resources\settings.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="resources\settings2.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="resources\lock.ico" />
+    <Resource Include="resources\lock2.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\alerts4.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="resources\busyhome.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\camera2.ico" />
@@ -239,19 +226,7 @@
     <Resource Include="resources\maps5.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="resources\camera3.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="resources\kg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="resources\settings3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="resources\back.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="resources\next.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\next2.ico" />
@@ -260,16 +235,12 @@
     <Resource Include="resources\refresh.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="resources\lock2.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="resources\settings4.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\settings4.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="resources\camera4.ico" />
     <Resource Include="resources\camera5.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -280,10 +251,7 @@
     <Resource Include="resources\temp2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="resources\maps6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="resources\alerts5.png" />
+    <Resource Include="resources\alerts.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\plan.ico" />
@@ -303,61 +271,30 @@
     <Resource Include="resources\start3.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="resources\start4.ico" />
-    <Resource Include="resources\start5.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="resources\start4.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="resources\start1.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\start2.png" />
     <Resource Include="resources\start3.png" />
-    <Resource Include="resources\start6.png" />
     <Resource Include="resources\start7.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="resources\db1.ico" />
-    <Resource Include="resources\set1.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="resources\set2.ico" />
-    <Resource Include="resources\db3.ico" />
     <Resource Include="resources\db4.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="resources\db2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="resources\db5.png" />
     <Resource Include="resources\db6.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="resources\db7.png" />
-    <Resource Include="resources\set3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="resources\db8.png" />
-    <Resource Include="resources\set4.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\db6.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\set5.png" />
-    <Resource Include="resources\set6.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\tv.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\adminRole3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="resources\userRole3.png" />
-    <Resource Include="resources\visitorRole3.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\adminRole.png" />
@@ -369,6 +306,27 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\visitorRole4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\busyhome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\alert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\settings.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\workerRole.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\iconapp.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\alerts5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

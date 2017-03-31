@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:BCSsolution"
         mc:Ignorable="d"
         Title="BCS automation solution" Height="660" Width="920" MinHeight="660" MinWidth="920"
-        Name="LobbyWin" Icon="resources/iconapp.png">
+        Name="LobbyWin" Icon="resources/iconapp.ico">
     <Grid VerticalAlignment="Stretch" Height="Auto" HorizontalAlignment="Stretch" >
         <Grid.RowDefinitions>
             <RowDefinition Height="65"/>
@@ -38,7 +38,7 @@
             </Menu>
             <Grid Height="43">
                 <ToolBar x:Name="mainToolBar" VerticalAlignment="Center" Height="40" Margin="-2,0,0,0" Width="147" HorizontalAlignment="Left">
-                    <Button x:Name="btnBack" VerticalAlignment="Center" Width="40" Margin="0,-2,0,-3" Click="btnBack_Click" ToolTip="Back">
+                    <Button x:Name="btnBack" VerticalAlignment="Center" Width="40" Margin="0,-2,0,-3" Click="btnBack_Click" ToolTip="Back (ctrl + backspace)">
                         <Image Source="/BCSsolution;component/resources/next2.ico" RenderTransformOrigin="0.5,0.5" >
                             <Image.RenderTransform>
                                 <TransformGroup>
@@ -50,10 +50,10 @@
                             </Image.RenderTransform>
                         </Image>
                     </Button>
-                    <Button x:Name="btnNext" VerticalAlignment="Center" Width="40" Margin="0,-2,0,-3" Click="btnNext_Click" ToolTip="Next">
+                    <Button x:Name="btnNext" VerticalAlignment="Center" Width="40" Margin="0,-2,0,-3" Click="btnNext_Click" ToolTip="Next (ctrl + Enter)">
                         <Image Source="/BCSsolution;component/resources/next2.ico" />
                     </Button>
-                    <Button x:Name="btnRefresh" VerticalAlignment="Center" Width="40" Margin="0,-2,0,-3" Click="btnRefresh_Click" ToolTip="Refresh">
+                    <Button x:Name="btnRefresh" VerticalAlignment="Center" Width="40" Margin="0,-2,0,-3" Click="btnRefresh_Click" ToolTip="Refresh (F5)">
                         <Image Source="/BCSsolution;component/resources/refresh.ico" />
                     </Button>
                 </ToolBar>
@@ -84,10 +84,10 @@
 
                 <ToolBar x:Name="automationToolBar" HorizontalAlignment="Left" VerticalAlignment="Center" Height="40" Width="264" Margin="453,-1,0,0" >
                     <Button x:Name="btnHome" VerticalAlignment="Center" Width="40" Margin="0,0,0,-5" Click="btnHome_Click" ToolTip="Home records">
-                        <Image Source="/BCSsolution;component/resources/busyhome.ico"/>
+                        <Image Source="/BCSsolution;component/resources/busyhome.png"/>
                     </Button>
                     <Button x:Name="btnLockMonitor" VerticalAlignment="Center" Width="40" Margin="0,0,0,-5" ToolTip="Input locker">
-                        <Image Source="/BCSsolution;component/resources/lock.ico" />
+                        <Image Source="/BCSsolution;component/resources/lock.png" />
                     </Button>
                     <Button x:Name="btnWeightMonitor" VerticalAlignment="Center" Width="40" Margin="0,0,0,-5" Click="btnWeightMonitor_Click" ToolTip="Weight monitor">
                         <Image Source="/BCSsolution;component/resources/kg.png" />
@@ -96,10 +96,10 @@
                         <Image Source="/BCSsolution;component/resources/temp.png" />
                     </Button>
                     <Button x:Name="btnTempMonitor" VerticalAlignment="Center" Width="40" Margin="0,0,0,-5" ToolTip="Automations alerts">
-                        <Image Source="/BCSsolution;component/resources/alerts5.png" />
+                        <Image Source="/BCSsolution;component/resources/alert.png" />
                     </Button>
                     <Button x:Name="btnAutomationSettings" VerticalAlignment="Center" Width="40" Margin="0,0,0,-5" ToolTip="Automations settings">
-                        <Image Source="/BCSsolution;component/resources/settings4.png" />
+                        <Image Source="/BCSsolution;component/resources/settings.ico" />
                     </Button>
                 </ToolBar>
 
@@ -129,7 +129,7 @@
 
         </Frame>
         <ScrollViewer x:Name="scrollConsole" Grid.Row="2" HorizontalAlignment="Stretch" Width="Auto">
-            <TextBlock x:Name="txtMessages" TextWrapping="Wrap" LineHeight="Auto" Padding="5,2" FontFamily="Arial" FontSize="12" VerticalAlignment="Bottom"/>
+            <TextBlock x:Name="txtMessages" TextWrapping="Wrap" LineHeight="Auto" Padding="5,2" FontFamily="Arial" FontSize="12" />
         </ScrollViewer>
         <Grid Grid.Row="3" VerticalAlignment="Bottom">
             <Grid.Background>

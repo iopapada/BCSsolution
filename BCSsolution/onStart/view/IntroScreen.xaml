@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BCSsolution.onStart.view"
         mc:Ignorable="d"
-        Title="SplashScreen" Height="250" Width="320" AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Icon="../../resources/iconapp.png" ResizeMode="NoResize" Cursor="Wait">
+        Title="SplashScreen" Height="250" Width="320" AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Icon="../../resources/iconapp.ico" ResizeMode="NoResize" Cursor="Wait">
     <Window.Background>
         <ImageBrush ImageSource="/BCSsolution;component/resources/start3.png"/>
     </Window.Background>

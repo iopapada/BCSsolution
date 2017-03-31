@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace BCSsolution.onStart.view
 {
@@ -17,6 +18,7 @@ namespace BCSsolution.onStart.view
         {
             InitializeComponent();
             this.lblVersioning.Content = MainWindow.version;
+            FocusManager.SetFocusedElement(LoginWindow, textBoxUsername);
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
