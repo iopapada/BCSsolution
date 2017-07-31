@@ -35,7 +35,6 @@ namespace BCSsolution.organization.model
             this.Property(x => x.LastName, m => { m.Column("lastname") ; m.NotNullable(true); m.Length(50); });
             this.Property(x => x.Grs, m => { m.Column("grs"); m.NotNullable(true); m.Length(20); });
             this.Property(x => x.Ids, m => { m.Column("ids"); m.NotNullable(true); m.Length(20); });
-
             this.Property(x => x.Email, m => { m.Column("email"); m.NotNullable(false); m.Length(50); });
             this.Property(x => x.Tel1, m => { m.Column("telephone"); m.NotNullable(false); m.Length(20); });
             this.Property(x => x.Mob1, m => { m.Column("mobile"); m.NotNullable(false); m.Length(20); });

@@ -14,6 +14,7 @@
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -24,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +35,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>resources\iconapp.ico</ApplicationIcon>
@@ -92,6 +95,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="organization\view\PageHomeControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="organization\view\PageLockerControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="organization\view\PageMaterials.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -112,7 +123,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="organization\view\PageTemperature.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="organization\view\PageTrace.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="organization\view\PageUserProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="organization\view\PageWScale.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -134,8 +157,16 @@
     <Compile Include="organization\model\Material.cs" />
     <Compile Include="organization\model\Supplier.cs" />
     <Compile Include="onStart\model\User.cs" />
+    <Compile Include="organization\viewmodel\MaterialRepo.cs" />
+    <Compile Include="organization\viewmodel\SupplierRepo.cs" />
     <Compile Include="organization\view\PageCustomers.xaml.cs">
       <DependentUpon>PageCustomers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="organization\view\PageHomeControl.xaml.cs">
+      <DependentUpon>PageHomeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="organization\view\PageLockerControl.xaml.cs">
+      <DependentUpon>PageLockerControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="organization\view\PageMaterials.xaml.cs">
       <DependentUpon>PageMaterials.xaml</DependentUpon>
@@ -152,8 +183,17 @@
     <Compile Include="organization\view\PageSuppliers.xaml.cs">
       <DependentUpon>PageSuppliers.xaml</DependentUpon>
     </Compile>
+    <Compile Include="organization\view\PageTemperature.xaml.cs">
+      <DependentUpon>PageTemperature.xaml</DependentUpon>
+    </Compile>
     <Compile Include="organization\view\PageTrace.xaml.cs">
       <DependentUpon>PageTrace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="organization\view\PageUserProfile.xaml.cs">
+      <DependentUpon>PageUserProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="organization\view\PageWScale.xaml.cs">
+      <DependentUpon>PageWScale.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -259,7 +299,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="automation\" />
-    <Folder Include="organization\viewmodel\" />
     <Folder Include="security\" />
   </ItemGroup>
   <ItemGroup>

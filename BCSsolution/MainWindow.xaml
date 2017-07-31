@@ -33,7 +33,7 @@
                     <MenuItem Header="TeamViewer"/>
                 </MenuItem>
                 <MenuItem Header="Settings">
-                     <MenuItem Header="User profile"/>
+                     <MenuItem Header="User profile" Click="MenuItem_Click"/>
                 </MenuItem>
             </Menu>
             <Grid Height="43">
@@ -86,16 +86,16 @@
                     <Button x:Name="btnHome" VerticalAlignment="Center" Width="40" Margin="0,0,0,-5" Click="btnHome_Click" ToolTip="Home records">
                         <Image Source="/BCSsolution;component/resources/busyhome.png"/>
                     </Button>
-                    <Button x:Name="btnLockMonitor" VerticalAlignment="Center" Width="40" Margin="0,0,0,-5" ToolTip="Input locker">
+                    <Button x:Name="btnLockMonitor" VerticalAlignment="Center" Width="40" Margin="0,0,0,-5" Click="btnLockMonitor_Click" ToolTip="Input locker" >
                         <Image Source="/BCSsolution;component/resources/lock.png" />
                     </Button>
                     <Button x:Name="btnWeightMonitor" VerticalAlignment="Center" Width="40" Margin="0,0,0,-5" Click="btnWeightMonitor_Click" ToolTip="Weight monitor">
                         <Image Source="/BCSsolution;component/resources/kg.png" />
                     </Button>
-                    <Button x:Name="btnAlerts" VerticalAlignment="Center" Width="40" Margin="0,0,0,-5" ToolTip="Temprature monitor">
+                    <Button x:Name="btnTempMonitor" VerticalAlignment="Top" Width="40" Margin="0,0,0,-5" Click="btnTempMonitor_Click" ToolTip="Temperature monitor">
                         <Image Source="/BCSsolution;component/resources/temp.png" />
                     </Button>
-                    <Button x:Name="btnTempMonitor" VerticalAlignment="Center" Width="40" Margin="0,0,0,-5" ToolTip="Automations alerts">
+                    <Button x:Name="btnAlerts" VerticalAlignment="Center" Width="40" Margin="0,0,0,-5" ToolTip="Automations alerts">
                         <Image Source="/BCSsolution;component/resources/alert.png" />
                     </Button>
                     <Button x:Name="btnAutomationSettings" VerticalAlignment="Center" Width="40" Margin="0,0,0,-5" ToolTip="Automations settings">

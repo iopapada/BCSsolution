@@ -38,13 +38,11 @@ namespace BCSsolution
             if(mainFrame.NavigationService.CanGoBack)
            mainFrame.NavigationService.GoBack();
         }
-
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
             if (mainFrame.NavigationService.CanGoForward)
                 mainFrame.NavigationService.GoForward();
         }
-
         private void btnRefresh_Click(object sender, RoutedEventArgs e)
         {
             
@@ -62,22 +60,18 @@ namespace BCSsolution
         {
             mainFrame.NavigationService.Navigate(new PageCustomers());
         }
-
         private void btnReceipt_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.NavigationService.Navigate(new PageReceipt());
         }
-
         private void btnTace_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.NavigationService.Navigate(new PageTrace());
         }
-
         private void btnPlan_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.NavigationService.Navigate(new PagePlan());
         }
-
         private void btnOrganizeSettings_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.NavigationService.Navigate(new PageSettings());
@@ -85,12 +79,19 @@ namespace BCSsolution
         //Automations buttons
         private void btnHome_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            mainFrame.NavigationService.Navigate(new PageHomeControl());
         }
-
+        private void btnLockMonitor_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.NavigationService.Navigate(new PageLockerControl());
+        }
         private void btnWeightMonitor_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            mainFrame.NavigationService.Navigate(new PageWScale());
+        }
+        private void btnTempMonitor_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.NavigationService.Navigate(new PageTemperature());
         }
         //Security buttons
 
@@ -107,16 +108,21 @@ namespace BCSsolution
             App.Current.Shutdown();
         }
 
-        //Static help functions
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.NavigationService.Navigate(new PageUserProfile());
+        }
+
+        //Static help messages functions
         #region
-        public static void AddTextMsg(string text) {
-                
+        public void AddTextMsg(string text) {
+            ((MainWindow)Application.Current.MainWindow).txtMessages.Text += "\n" + text;
         }
         public void AddWarningTextMsg(string text) {
 
         }
         public void AddExceptionTextMsg(string text) {
-
+            ((MainWindow)Application.Current.MainWindow).txtMessages.Text += "\n" + text;
         }
         public void ClearTextBlock() {
 

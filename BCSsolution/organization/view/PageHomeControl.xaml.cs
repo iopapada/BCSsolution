@@ -1,5 +1,4 @@
-﻿using BCSsolution.organization.viewmodel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,21 +16,13 @@ using System.Windows.Shapes;
 namespace BCSsolution.organization.view
 {
     /// <summary>
-    /// Interaction logic for PageMaterials.xaml
+    /// Interaction logic for PageHomeControl.xaml
     /// </summary>
-    public partial class PageMaterials : Page
+    public partial class PageHomeControl : Page
     {
-        public PageMaterials()
+        public PageHomeControl()
         {
             InitializeComponent();
-            LoadMaterials();
-        }
-
-        private void LoadMaterials()
-        {
-            MaterialRepo materialVM = new MaterialRepo();
-            var materials = materialVM.FindAll();
-            dgMaterials.ItemsSource = materials;
         }
     }
 }

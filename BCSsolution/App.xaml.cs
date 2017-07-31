@@ -4,6 +4,8 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Net.Sockets;
+using System.Net;
 
 namespace BCSsolution
 {
@@ -27,7 +29,7 @@ namespace BCSsolution
             var startupTask = new Task(() =>
             {
                 //Load plugins in non-UI thread - may be time consuming
-                for (int i = 0; i < 2; i++)
+                for (int i = 0; i < 5; i++)
                 {
                     Thread.Sleep(1000);
                     //set custom message on screen

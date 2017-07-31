@@ -77,8 +77,10 @@ namespace BCSsolution.dbManager
             ModelMapper mapper = new ModelMapper();
             mapper.AddMapping<SupplierMap>();
             mapper.AddMapping<UserMap>();
+            mapper.AddMapping<MaterialMap>();
+            //mapper.AddMapping<CustomerMap>();
             //mapper.AddMapping<>
-            HbmMapping mapping = mapper.CompileMappingFor(new[] { typeof(Supplier), typeof(User) });
+            HbmMapping mapping = mapper.CompileMappingFor(new[] { typeof(Supplier), typeof(User), typeof(Material) });
             
             return mapping;
         }
@@ -100,11 +102,9 @@ namespace BCSsolution.dbManager
                 mySession.Save(new Supplier { FirstName = "John", LastName = "Papa", Ids = "12345", Grs ="12345", Tel1 = "123456789", Mob1 = "123456789", Email = "test@gmail.com" });
                 mySession.Save(new Supplier { FirstName = "Greek", LastName = "Freak", Ids = "123456", Grs = "123456", Tel1 = "123456789", Mob1 = "123456789", Email = "test@gmail.com"});
 
-                //mySession.Save(new Material { FirstName = "John", LastName = "Papa", Ids = "12345", Grs = "12345", Tel1 = "123456789", Mob1 = "123456789", Email = "test@gmail.com" });
-                //mySession.Save(new Material { FirstName = "Greek", LastName = "Freak", Ids = "123456", Grs = "123456", Tel1 = "123456789", Mob1 = "123456789", Email = "test@gmail.com" });
+                mySession.Save(new Material { Code = "001", Title = "Dole bananas", Description = "", TextBox_1 = "", TextBox_2 = "", Origin = "Ecuador", Type = "cavendish" });
+                mySession.Save(new Material { Code = "014", Title = "Orsero bananas", Description = "", TextBox_1 = "", TextBox_2 = "", Origin = "Ecuador", Type = "cavendish" });
 
-                //mySession.Save(new Customer { FirstName = "John", LastName = "Papa", Ids = "12345", Grs = "12345", Tel1 = "123456789", Mob1 = "123456789", Email = "test@gmail.com" });
-                //mySession.Save(new customer { FirstName = "Greek", LastName = "Freak", Ids = "123456", Grs = "123456", Tel1 = "123456789", Mob1 = "123456789", Email = "test@gmail.com" });
                 transaction.Commit();
             };
         }

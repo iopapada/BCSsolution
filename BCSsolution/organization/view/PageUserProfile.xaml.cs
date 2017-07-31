@@ -1,8 +1,8 @@
-﻿using BCSsolution.organization.viewmodel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -17,21 +17,14 @@ using System.Windows.Shapes;
 namespace BCSsolution.organization.view
 {
     /// <summary>
-    /// Interaction logic for PageMaterials.xaml
+    /// Interaction logic for PageUserProfile.xaml
     /// </summary>
-    public partial class PageMaterials : Page
+    public partial class PageUserProfile : Page
     {
-        public PageMaterials()
+        public PageUserProfile()
         {
             InitializeComponent();
-            LoadMaterials();
-        }
-
-        private void LoadMaterials()
-        {
-            MaterialRepo materialVM = new MaterialRepo();
-            var materials = materialVM.FindAll();
-            dgMaterials.ItemsSource = materials;
+            lblTitle.Content = Thread.CurrentPrincipal.Identity.Name + " Profile";
         }
     }
 }

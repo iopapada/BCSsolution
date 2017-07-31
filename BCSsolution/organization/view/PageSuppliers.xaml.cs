@@ -1,4 +1,5 @@
 ﻿using BCSsolution.organization.model;
+using BCSsolution.organization.viewmodel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,8 +28,8 @@ namespace BCSsolution.organization.view
         }
 
         private void LoadSuppliers() {
-            List<Supplier> suppliers = new List<Supplier>();
-
+            SupplierRepo supplierVM = new SupplierRepo();
+            var suppliers = supplierVM.FindAll();
             dgSuppliers.ItemsSource = suppliers;
         }
 
