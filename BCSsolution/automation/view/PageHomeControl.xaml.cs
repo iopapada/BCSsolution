@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace BCSsolution.organization.view
+namespace BCSsolution.automation.view
 {
     /// <summary>
-    /// Interaction logic for PageLockerControl.xaml
+    /// Interaction logic for PageHomeControl.xaml
     /// </summary>
-    public partial class PageLockerControl : Page
+    public partial class PageHomeControl : Page
     {
-        public PageLockerControl()
+        public PageHomeControl()
         {
             InitializeComponent();
         }

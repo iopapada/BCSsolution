@@ -1,18 +1,5 @@
-﻿using BCSsolution.organization.viewmodel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using BCSsolution.organization.model;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace BCSsolution.organization.view
 {
@@ -29,7 +16,7 @@ namespace BCSsolution.organization.view
 
         private void LoadMaterials()
         {
-            MaterialRepo materialVM = new MaterialRepo();
+            MaterialRepository materialVM = new MaterialRepository();
             var materials = materialVM.FindAll();
             dgMaterials.ItemsSource = materials;
         }

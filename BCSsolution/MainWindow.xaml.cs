@@ -17,6 +17,7 @@ using System.Reflection;
 using BCSsolution.onStart;
 using BCSsolution.onStart.view;
 using System.Threading;
+using BCSsolution.automation.view;
 
 namespace BCSsolution
 {

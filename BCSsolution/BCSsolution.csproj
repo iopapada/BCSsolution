@@ -95,11 +95,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="organization\view\PageHomeControl.xaml">
+    <Page Include="automation\view\PageHomeControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="organization\view\PageLockerControl.xaml">
+    <Page Include="automation\view\PageLockerControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -123,7 +123,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="organization\view\PageTemperature.xaml">
+    <Page Include="automation\view\PageTemperature.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -135,7 +135,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="organization\view\PageWScale.xaml">
+    <Page Include="automation\view\PageWScale.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -157,15 +157,17 @@
     <Compile Include="organization\model\Material.cs" />
     <Compile Include="organization\model\Supplier.cs" />
     <Compile Include="onStart\model\User.cs" />
-    <Compile Include="organization\viewmodel\MaterialRepo.cs" />
-    <Compile Include="organization\viewmodel\SupplierRepo.cs" />
+    <Compile Include="organization\model\collection\EcObservableCollection.cs" />
+    <Compile Include="organization\model\MaterialRepository.cs" />
+    <Compile Include="organization\model\SupplierRepository.cs" />
+    <Compile Include="organization\model\SupplierView.cs" />
     <Compile Include="organization\view\PageCustomers.xaml.cs">
       <DependentUpon>PageCustomers.xaml</DependentUpon>
     </Compile>
-    <Compile Include="organization\view\PageHomeControl.xaml.cs">
+    <Compile Include="automation\view\PageHomeControl.xaml.cs">
       <DependentUpon>PageHomeControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="organization\view\PageLockerControl.xaml.cs">
+    <Compile Include="automation\view\PageLockerControl.xaml.cs">
       <DependentUpon>PageLockerControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="organization\view\PageMaterials.xaml.cs">
@@ -183,7 +185,7 @@
     <Compile Include="organization\view\PageSuppliers.xaml.cs">
       <DependentUpon>PageSuppliers.xaml</DependentUpon>
     </Compile>
-    <Compile Include="organization\view\PageTemperature.xaml.cs">
+    <Compile Include="automation\view\PageTemperature.xaml.cs">
       <DependentUpon>PageTemperature.xaml</DependentUpon>
     </Compile>
     <Compile Include="organization\view\PageTrace.xaml.cs">
@@ -192,7 +194,7 @@
     <Compile Include="organization\view\PageUserProfile.xaml.cs">
       <DependentUpon>PageUserProfile.xaml</DependentUpon>
     </Compile>
-    <Compile Include="organization\view\PageWScale.xaml.cs">
+    <Compile Include="automation\view\PageWScale.xaml.cs">
       <DependentUpon>PageWScale.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -298,7 +300,7 @@
     <Resource Include="resources\settings5.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="automation\" />
+    <Folder Include="automation\model\" />
     <Folder Include="security\" />
   </ItemGroup>
   <ItemGroup>

@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace BCSsolution.organization.view
+namespace BCSsolution.automation.view
 {
     /// <summary>
-    /// Interaction logic for PageHomeControl.xaml
+    /// Interaction logic for PageTemperature.xaml
     /// </summary>
-    public partial class PageHomeControl : Page
+    public partial class PageTemperature : Page
     {
-        public PageHomeControl()
+        public PageTemperature()
         {
             InitializeComponent();
         }

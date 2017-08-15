@@ -37,8 +37,8 @@ namespace BCSsolution.dbManager
         public static void initDB() {
             Setup();
             //Run only the first time
-            CreateDatabaseSchema();
-            DBinitialize();
+            //CreateDatabaseSchema();
+            //DBinitialize();
         }
 
         public static void Setup() {
@@ -99,8 +99,8 @@ namespace BCSsolution.dbManager
                 mySession.Save(new User { UserName = "user", FirstName = "user", LastName = "User", HashedPassword = UserRepository.CalculateHash("user", "user"), UserMail = "papadakisfruits@gmail.com" , UserRole = User.Role.user});
                 mySession.Save(new User { UserName = "visitor", FirstName = "visitor", LastName = "Visitor", HashedPassword = UserRepository.CalculateHash("visitor", "visitor"), UserMail = "papadakisfruits@gmail.com" , UserRole = User.Role.visitor});
 
-                mySession.Save(new Supplier { FirstName = "John", LastName = "Papa", Ids = "12345", Grs ="12345", Tel1 = "123456789", Mob1 = "123456789", Email = "test@gmail.com" });
-                mySession.Save(new Supplier { FirstName = "Greek", LastName = "Freak", Ids = "123456", Grs = "123456", Tel1 = "123456789", Mob1 = "123456789", Email = "test@gmail.com"});
+                mySession.Save(new Supplier { FirstName = "John", LastName = "Papa", Ids = "12345", Grs ="12345", Tel1 = "123456789", Mob1 = "123456789", Email = "test@gmail.com", LblPrintText = "--" });
+                mySession.Save(new Supplier { FirstName = "Greek", LastName = "Freak", Ids = "123456", Grs = "123456", Tel1 = "123456789", Mob1 = "123456789", Email = "test@gmail.com", LblPrintText = "--"});
 
                 mySession.Save(new Material { Code = "001", Title = "Dole bananas", Description = "", TextBox_1 = "", TextBox_2 = "", Origin = "Ecuador", Type = "cavendish" });
                 mySession.Save(new Material { Code = "014", Title = "Orsero bananas", Description = "", TextBox_1 = "", TextBox_2 = "", Origin = "Ecuador", Type = "cavendish" });

@@ -1,10 +1,5 @@
 ﻿using NHibernate.Mapping.ByCode;
 using NHibernate.Mapping.ByCode.Conformist;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BCSsolution.organization.model
 {
@@ -22,6 +17,11 @@ namespace BCSsolution.organization.model
         public virtual string Email { get; set; }
         public virtual string Tel1 { get; set; }
         public virtual string Mob1 { get; set; }
+        public virtual string LblPrintText { get; set; }
+
+        //public Supplier(string fname, string lname, string grs, string email, string tel1, string mob1) {
+
+        //}
     }
 
     public class SupplierMap : ClassMapping<Supplier>
@@ -38,6 +38,7 @@ namespace BCSsolution.organization.model
             this.Property(x => x.Email, m => { m.Column("email"); m.NotNullable(false); m.Length(50); });
             this.Property(x => x.Tel1, m => { m.Column("telephone"); m.NotNullable(false); m.Length(20); });
             this.Property(x => x.Mob1, m => { m.Column("mobile"); m.NotNullable(false); m.Length(20); });
+            this.Property(x => x.LblPrintText, m => { m.Column("txtlabel"); m.NotNullable(false); m.Length(200); });
         }
     }
 }

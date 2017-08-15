@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using NHibernate;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
+using System.Windows;
 
 namespace BCSsolution.dbManager
 {
@@ -15,8 +13,9 @@ namespace BCSsolution.dbManager
             {
                 return NhibernateSessionManager.OpenSession().Load<T>(id);
             }
-            catch
+            catch(Exception ex)
             {
+                ((MainWindow)Application.Current.MainWindow).AddExceptionTextMsg(ex.ToString());
                 throw;
             }
         }
@@ -27,26 +26,31 @@ namespace BCSsolution.dbManager
             {
                 return NhibernateSessionManager.OpenSession().CreateCriteria(typeof(T)).List<T>();
             }
-            catch
+            catch(Exception ex)
             {
+                ((MainWindow)Application.Current.MainWindow).AddExceptionTextMsg(ex.ToString());
                 throw;
             }
         }
 
-        public T SaveOrUpdate(T entity)
+        public void SaveOrUpdate(T entity)
         {
             using (ITransaction transaction = NhibernateSessionManager.OpenSession().BeginTransaction())
             {
                 try
                 {
-                    NhibernateSessionManager.OpenSession().SaveOrUpdate(entity);
+                    var session = NhibernateSessionManager.OpenSession();
+                    session.SaveOrUpdate(entity);
                     transaction.Commit();
-                    return entity;
+                    session.Flush();
+                    session.Clear();
+                    //return entity;
+
                 }
-                catch
+                catch (Exception ex)
                 {
                     transaction.Rollback();
-                    throw;
+                    ((MainWindow)Application.Current.MainWindow).AddExceptionTextMsg(ex.ToString());
                 }
             }
         }
@@ -57,13 +61,16 @@ namespace BCSsolution.dbManager
             {
                 try
                 {
-                    NhibernateSessionManager.OpenSession().Delete(entity);
+                    var session = NhibernateSessionManager.OpenSession();
+                    session.Delete(entity);
                     transaction.Commit();
+                    session.Flush();
+                    session.Clear();
                 }
-                catch
+                catch(Exception ex)
                 {
                     transaction.Rollback();
-                    throw;
+                    ((MainWindow)Application.Current.MainWindow).AddExceptionTextMsg(ex.ToString());
                 }
             }
         }

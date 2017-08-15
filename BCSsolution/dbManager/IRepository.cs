@@ -6,7 +6,7 @@ namespace BCSsolution.dbManager
     {
         T FindById(int id);
         IList<T> FindAll();
-        T SaveOrUpdate(T entity);
+        void SaveOrUpdate(T entity);
         void Delete(T entity);
     }
 }

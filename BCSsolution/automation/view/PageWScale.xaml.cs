@@ -2,11 +2,10 @@
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace BCSsolution.organization.view
+namespace BCSsolution.automation.view
 {
     /// <summary>
     /// Interaction logic for PageWScale.xaml
