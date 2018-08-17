@@ -19,6 +19,15 @@ namespace BCSsolution.onStart.view
             InitializeComponent();
             this.lblVersioning.Content = MainWindow.version;
             FocusManager.SetFocusedElement(LoginWindow, textBoxUsername);
+            LoadSettings();
+        }
+
+        private void LoadSettings()
+        {
+            if (Properties.Settings.Default.Lang.Equals("GR"))
+                CBoxLang.SelectedItem = CBoxLang.Items[0] as ComboBoxItem;
+            else
+                CBoxLang.SelectedItem = CBoxLang.Items[1] as ComboBoxItem;
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
@@ -51,6 +60,32 @@ namespace BCSsolution.onStart.view
                 this.Hide();
             else
                 App.Current.Shutdown();
+        }
+
+        private void CBoxLang_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBoxItem temp1 = CBoxLang.SelectedItem as ComboBoxItem;
+            var culture = new System.Globalization.CultureInfo("en-US");
+            switch (temp1.Name)
+            {
+                case "GR":
+                    culture = new System.Globalization.CultureInfo("el-GR");
+                    break;
+                default:
+                    culture = new System.Globalization.CultureInfo("en-US");
+                    break;
+
+            }
+            Properties.Settings.Default["Lang"] = temp1.Name;
+
+            //ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
+            //Windows.ApplicationModel.Resources.Core.ResourceContext.GetForCurrentView().Reset();
+            //Windows.ApplicationModel.Resources.Core.ResourceContext.GetForViewIndependentUse().Reset();
+            //Reload frame
+            this.UpdateLayout();
+            //var _Frame = Window.Current.Content as Frame;
+            //_Frame.Navigate(_Frame.Content.GetType());
+            //_Frame.GoBack();
         }
     }
 }

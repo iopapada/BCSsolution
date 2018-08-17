@@ -3,13 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:BCSsolution.onStart.view"
-        mc:Ignorable="d"
-        ShowInTaskbar="True"
-        WindowStyle="ToolWindow"
-        Closing="login_OnClosing"
-        Name="LoginWindow"
-        Title="Login" Height="250" Width="400" Icon="../../resources/lock2.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Topmost="True" Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}">
+        mc:Ignorable="d" ShowInTaskbar="True" WindowStyle="ToolWindow"
+        Closing="login_OnClosing" Name="LoginWindow"
+        Title="Login" Height="260" Width="400" Icon="../../resources/lock2.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Topmost="True" Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -17,25 +13,25 @@
                 <GradientStop Color="White" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label x:Name="lblUsername" Content="Username:" HorizontalAlignment="Left" Margin="59,60,0,0" VerticalAlignment="Top" Width="81" Height="23" HorizontalContentAlignment="Right"/>
+        <Label x:Name="lblUsername" Content="{DynamicResource Username}" HorizontalAlignment="Left" Margin="59,60,0,0" VerticalAlignment="Top" Width="81" Height="23" HorizontalContentAlignment="Right"/>
         <TextBox x:Name="textBoxUsername" HorizontalAlignment="Left" Height="23" Margin="145,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184"/>
         <Label x:Name="lblPswd" Content="Password:" HorizontalAlignment="Left" Margin="59,88,0,0" VerticalAlignment="Top" Width="81" Height="23" HorizontalContentAlignment="Right"/>
         <PasswordBox x:Name="textBoxPswd" HorizontalAlignment="Left" Margin="145,88,0,0" VerticalAlignment="Top" Width="184" Height="23"/>
         <Button x:Name="btnLogin" Style="{StaticResource BaseButtonStyle}" Content="Login" HorizontalAlignment="Left" Margin="192,117,0,0" VerticalAlignment="Top" Width="101" Click="btnLogin_Click" IsDefault="True"/>
 
-        <Button x:Name="btnDBconnect" Style="{StaticResource BaseButtonStyle}" HorizontalAlignment="Left" Margin="11,137,0,0" VerticalAlignment="Top" Width="42" Height="42">
+        <Button x:Name="btnDBconnect" Style="{StaticResource BaseButtonStyle}" HorizontalAlignment="Left" Margin="115,148,0,0" VerticalAlignment="Top" Width="42" Height="42">
             <Button.Background>
                 <ImageBrush ImageSource="/BCSsolution;component/resources/db6.png" Stretch="None"/>
             </Button.Background>
         </Button>
 
-        <Button x:Name="btnPreSettings" Style="{StaticResource BaseButtonStyle}" HorizontalAlignment="Left" Margin="62,137,0,0" VerticalAlignment="Top" Width="42" Height="42">
+        <Button x:Name="btnPreSettings" Style="{StaticResource BaseButtonStyle}" HorizontalAlignment="Left" Margin="62,148,0,0" VerticalAlignment="Top" Width="42" Height="42">
             <Button.Background>
                 <ImageBrush ImageSource="/BCSsolution;component/resources/set5.png" Stretch="None"/>
             </Button.Background>
         </Button>
 
-        <Button x:Name="btnTeamViewer" Style="{StaticResource BaseButtonStyle}" HorizontalAlignment="Left" Margin="340,137,0,0" VerticalAlignment="Top" Width="42" Height="42">
+        <Button x:Name="btnTeamViewer" Style="{StaticResource BaseButtonStyle}" HorizontalAlignment="Left" Margin="10,148,0,0" VerticalAlignment="Top" Width="42" Height="42">
             <Button.Background>
                 <ImageBrush ImageSource="/BCSsolution;component/resources/tv.png"/>
             </Button.Background>
@@ -53,5 +49,17 @@
         </Label>
         <Label x:Name="lblVersioning" HorizontalAlignment="Left" Margin="294,0,0,0" VerticalAlignment="Top" Width="100" Foreground="#FFFBFAFA" FontSize="11" Height="27"/>
         <Label x:Name="lblbWrongCredentialsMsg" Content="Access is denied, please check your credentials." HorizontalAlignment="Left" Margin="109,155,0,0" VerticalAlignment="Top" Width="226" FontSize="9" Foreground="Red" Visibility="Hidden"/>
+        <ComboBox HorizontalAlignment="Left" Name="CBoxLang" Margin="325,168,0,0" VerticalAlignment="Top" Width="49" Height="22" SelectionChanged="CBoxLang_SelectionChanged">
+            <ComboBoxItem Name="GR">
+                <StackPanel Orientation="Vertical">
+                    <Image Width="20" Height="16" Source="/BCSsolution;component/resources/GR.png" Stretch="None"  />
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem Name="EN">
+                <StackPanel Orientation="Vertical">
+                    <Image Width="20" Height="16" Source="/BCSsolution;component/resources/EN.png" Stretch="None" />
+                </StackPanel>
+            </ComboBoxItem>
+        </ComboBox>
     </Grid>
 </Window>

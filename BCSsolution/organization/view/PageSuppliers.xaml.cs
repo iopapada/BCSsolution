@@ -3,6 +3,10 @@ using BCSsolution.organization.model.collection;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.IO;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
@@ -52,9 +56,36 @@ namespace BCSsolution.organization.view
                 ((MainWindow)Application.Current.MainWindow).AddExceptionTextMsg(ex.ToString());
             }
         }
-        private void btnPrintLbl_Click(object sender, RoutedEventArgs e)
+        private async void btnPrintLbl_Click(object sender, RoutedEventArgs e)
         {
+            string IP = "192.168.1.4";
+            int port = 9100;
+            string fileName = "D:\\Downloads\\x.x";
 
+            IPEndPoint printerIP = null;
+            Socket socket = null;
+            try
+            {
+                if (printerIP == null)
+                {
+                    /* IP is a string property for the printer's IP address. */
+                    /* 9100 is the common port of all our Zebra printers. */
+                    printerIP = new IPEndPoint(IPAddress.Parse(IP), port);
+                }
+
+                socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream,ProtocolType.Tcp);
+                socket.Connect(printerIP);
+                socket.SendFile(fileName);
+            }
+            catch (Exception ex)
+            {
+                ((MainWindow)Application.Current.MainWindow).AddExceptionTextMsg(ex.ToString());
+            }
+            finally
+            {
+                socket.Shutdown(SocketShutdown.Both);
+                socket.Close();
+            }
         }
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {

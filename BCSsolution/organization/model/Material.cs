@@ -1,10 +1,5 @@
 ﻿using NHibernate.Mapping.ByCode;
 using NHibernate.Mapping.ByCode.Conformist;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BCSsolution.organization.model
 {
@@ -16,10 +11,16 @@ namespace BCSsolution.organization.model
         public virtual string Description { get; set; }
         public virtual string TextBox_1 { get; set; }
         public virtual string TextBox_2 { get; set; }
+        public virtual string Country { get; set; }
+        public virtual bool IsEECountry { get; set; }
         public virtual string Origin { get; set; }
         public virtual string Type { get; set; }
+        public virtual bool IsWeighed { get; set; }
+        public virtual bool IsEnabled { get; set; }
+        public virtual string Category { get; set; }
+        public virtual string Variety { get; set; }
+        public virtual string ClassProduct { get; set; }
     }
-
     public class MaterialMap : ClassMapping<Material>
     {
         public MaterialMap()

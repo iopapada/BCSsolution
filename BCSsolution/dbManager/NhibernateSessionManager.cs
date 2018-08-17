@@ -37,8 +37,8 @@ namespace BCSsolution.dbManager
         public static void initDB() {
             Setup();
             //Run only the first time
-            //CreateDatabaseSchema();
-            //DBinitialize();
+            CreateDatabaseSchema();
+            DBinitialize();
         }
 
         public static void Setup() {

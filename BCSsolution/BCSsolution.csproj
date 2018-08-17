@@ -69,6 +69,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="resources\lang\el-GR\Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="security\view\PageBeye.xaml.cs">
+      <DependentUpon>PageBeye.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="security\view\PageBmotioneye.xaml.cs">
+      <DependentUpon>PageBmotioneye.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="security\view\PageSecurityAlerts.xaml.cs">
+      <DependentUpon>PageSecurityAlerts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="security\view\PageSecuritySettings.xaml.cs">
+      <DependentUpon>PageSecuritySettings.xaml</DependentUpon>
+    </Compile>
+    <Page Include="automation\view\PageAlerts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="automation\view\PageAutomationSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -76,6 +101,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="automation\view\PageAlerts.xaml.cs">
+      <DependentUpon>PageAlerts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="automation\view\PageAutomationSettings.xaml.cs">
+      <DependentUpon>PageAutomationSettings.xaml</DependentUpon>
     </Compile>
     <Compile Include="dbManager\IRepository.cs" />
     <Compile Include="dbManager\Repository.cs" />
@@ -136,6 +167,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="automation\view\PageWScale.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="security\view\PageBeye.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="security\view\PageBmotioneye.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="security\view\PageSecurityAlerts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="security\view\PageSecuritySettings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -213,6 +260,10 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\lang\el-GR\Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -301,7 +352,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="automation\model\" />
-    <Folder Include="security\" />
+    <Folder Include="resources\lang\en-US\" />
+    <Folder Include="security\model\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\material.ico" />
@@ -368,6 +420,10 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\alerts5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\EN.png" />
+    <Resource Include="resources\GR.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

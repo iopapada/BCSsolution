@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:BCSsolution"
         mc:Ignorable="d"
         Title="BCS automation solution" Height="660" Width="920" MinHeight="660" MinWidth="920"
         Name="LobbyWin" Icon="resources/iconapp.ico">
@@ -95,10 +94,10 @@
                     <Button x:Name="btnTempMonitor" VerticalAlignment="Top" Width="40" Margin="0,0,0,-5" Click="btnTempMonitor_Click" ToolTip="Temperature monitor">
                         <Image Source="/BCSsolution;component/resources/temp.png" />
                     </Button>
-                    <Button x:Name="btnAlerts" VerticalAlignment="Center" Width="40" Margin="0,0,0,-5" ToolTip="Automations alerts">
+                    <Button x:Name="btnAlerts" VerticalAlignment="Center" Width="40" Margin="0,0,0,-5" ToolTip="Automations alerts" Click="btnAlerts_Click">
                         <Image Source="/BCSsolution;component/resources/alert.png" />
                     </Button>
-                    <Button x:Name="btnAutomationSettings" VerticalAlignment="Center" Width="40" Margin="0,0,0,-5" ToolTip="Automations settings">
+                    <Button x:Name="btnAutomationSettings" VerticalAlignment="Center" Width="40" Margin="0,0,0,-5" ToolTip="Automations settings" Click="btnAutomationSettings_Click">
                         <Image Source="/BCSsolution;component/resources/settings.ico" />
                     </Button>
                 </ToolBar>
@@ -119,15 +118,7 @@
                 </ToolBar>
             </Grid>
         </StackPanel>
-        <Frame x:Name="mainFrame" Grid.Row="1" NavigationUIVisibility="Hidden" Width="Auto" BorderThickness="3.0" BorderBrush="LightGray">
-            <Frame.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="1"/>
-                </LinearGradientBrush>
-            </Frame.Background>
-
-        </Frame>
+        <Frame x:Name="mainFrame" Grid.Row="1" NavigationUIVisibility="Hidden" Width="Auto" BorderThickness="3.0" BorderBrush="LightGray"/>
         <ScrollViewer x:Name="scrollConsole" Grid.Row="2" HorizontalAlignment="Stretch" Width="Auto">
             <TextBlock x:Name="txtMessages" TextWrapping="Wrap" LineHeight="Auto" Padding="5,2" FontFamily="Arial" FontSize="12" />
         </ScrollViewer>

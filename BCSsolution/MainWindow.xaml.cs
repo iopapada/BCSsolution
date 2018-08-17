@@ -94,6 +94,14 @@ namespace BCSsolution
         {
             mainFrame.NavigationService.Navigate(new PageTemperature());
         }
+        private void btnAlerts_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.NavigationService.Navigate(new PageAlerts());
+        }
+        private void btnAutomationSettings_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.NavigationService.Navigate(new PageAutomationSettings());
+        }
         //Security buttons
 
         //MenuItems buttons
@@ -103,17 +111,14 @@ namespace BCSsolution
             LoginScreen newLoginTry = new LoginScreen();
             newLoginTry.Show();
         }
-
         private void btnExit_Click(object sender, RoutedEventArgs e)
         {
             App.Current.Shutdown();
         }
-
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.NavigationService.Navigate(new PageUserProfile());
         }
-
         //Static help messages functions
         #region
         public void AddTextMsg(string text) {
@@ -141,7 +146,6 @@ namespace BCSsolution
             else if (e.Key == Key.F5)
                 btnRefresh_Click(sender, e);
             //else if (e.Key == Key.Escape)
-               
         }
     }
 }
